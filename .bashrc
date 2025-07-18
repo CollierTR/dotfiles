@@ -150,32 +150,36 @@ export LS_
 
 
 # ---------------------------------------------------------start
-# Display the current Git branch in the Bash prompt.
-
-function git_branch() {
-    # Only run if inside a Git repo
-    if git rev-parse --is-inside-work-tree &>/dev/null; then
-        # Get branch name or tag or commit
-        branch=$(git symbolic-ref --short HEAD 2>/dev/null || git describe --tags --exact-match 2>/dev/null || git rev-parse --short HEAD 2>/dev/null)
-
-        # Check for uncommitted changes
-        dirty=""
-        if ! git diff --quiet 2>/dev/null || ! git diff --cached --quiet 2>/dev/null; then
-            dirty="*"
-        fi
-
-        echo "($branch$dirty)"
+find_git_branch() {
+  # Based on: http://stackoverflow.com/a/13003854/170413
+  local branch
+  if branch=$(git rev-parse --abbrev-ref HEAD 2> /dev/null); then
+    if [[ "$branch" == "HEAD" ]]; then
+      branch='detached*'
     fi
+    git_branch="($branch"
+    git_closer=") "
+  else
+    git_branch=""
+    git_closer=""
+  fi
 }
 
-# Set the prompt.
-function bash_prompt(){
-    # PS1='${debian_chroot:+($debian_chroot)}'${blu}'$(git_branch)'${pur}' \W'${grn}' \$ '${clr} # Shows just the last path
-    PS1='${debian_chroot:+($debian_chroot)}'${blu}'$(git_branch)'${pur}' \w'${grn}' \$ '${clr} # Shows full path
-    # PS1='${debian_chroot:+($debian_chroot)}'${blu}'$(git_branch)'${pur}' \W'${grn}' > '${clr}
+find_git_dirty() {
+  local status=$(git status --porcelain 2> /dev/null)
+  if [[ "$status" != "" ]]; then
+      git_dirty="*"
+  else
+      git_dirty=''
+  fi
 }
 
-bash_prompt
+PROMPT_COMMAND="find_git_branch; find_git_dirty; $PROMPT_COMMAND"
+
+# export PS1="\n ${grn}\W${red}\$(GIT_PS1_SHOWUNTRACKEDFILES=1 GIT_PS1_SHOWDIRTYSTATE=1 __git_ps1)${clr} $ "
+
+# This is a backup if the top doesn't work
+export PS1="\${debian_chroot:+(\$debian_chroot)}\n${pur}\$git_branch\$git_dirty\$git_closer${grn}\W ⮞ ${clr}"
 # -------------------------------------------------- end
 
 
@@ -200,3 +204,5 @@ alias dec='cal -m 12'
 
 # Vim Mode!
 set -o vi
+
+echo reloaded
