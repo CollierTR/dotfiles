@@ -3,6 +3,7 @@
 # for examples
 
 # ps1_old="$PS1"
+#
 
 # Color Variables
 blk='\[\033[01;30m\]'   # Black
@@ -208,4 +209,3 @@ alias dec='cal -m 12'
 # Vim Mode!
 set -o vi
 
-echo reloaded
