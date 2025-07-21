@@ -190,10 +190,10 @@ require('lazy').setup({
     },
   },
 
-  {
-    'tris203/precognition.nvim',
+  --{
+    --'tris203/precognition.nvim',
     --event = "VeryLazy",
-    opts = {
+    --opts = {
       -- startVisible = true,
       -- showBlankVirtLine = true,
       -- highlightColor = { link = "Comment" },
@@ -218,8 +218,8 @@ require('lazy').setup({
       -- disabled_fts = {
       --     "startify",
       -- },
-    },
-  },
+    --},
+  --},
 
   {
     'nvzone/typr',
