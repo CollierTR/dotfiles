@@ -209,3 +209,12 @@ alias dec='cal -m 12'
 # Vim Mode!
 set -o vi
 
+
+###########################
+#     Start up script     #
+###########################
+echo " "
+echo " "
+verse | lolcat
+echo " "
+echo " "
