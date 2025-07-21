@@ -25,6 +25,14 @@ end)
 -- Enable break indent
 vim.o.breakindent = true
 
+-- Set default indentation settings
+vim.opt.tabstop = 2 -- Number of visual spaces per TAB
+vim.opt.shiftwidth = 2 -- Number of spaces to use for each autoindent
+vim.opt.softtabstop = 2 -- Number of spaces Neovim uses when you hit <Tab>
+vim.opt.expandtab = true -- Use spaces instead of tabs
+vim.opt.smartindent = true -- Smart autoindenting on new lines
+vim.opt.autoindent = true -- Copy indent from current line when starting a new one
+
 -- Save undo history
 vim.o.undofile = true
 
@@ -784,7 +792,22 @@ require('lazy').setup({
         -- python = { "isort", "black" },
         --
         -- You can use 'stop_after_first' to run the first available formatter from the list
-        -- javascript = { "prettierd", "prettier", stop_after_first = true },
+        javascript = { 'prettierd', 'prettier' },
+        typescript = { 'prettierd', 'prettier' },
+        --typescript = { 'prettierd', 'prettier', stop_after_first = true },
+        javascriptreact = { 'prettierd', 'prettier' },
+        typescriptreact = { 'prettierd', 'prettier' },
+        html = { 'prettierd', 'prettier' },
+        css = { 'prettierd', 'prettier' },
+        json = { 'prettierd', 'prettier' },
+      },
+      formatters = {
+        prettier = {
+          prepend_args = { '--tab-width', '2', '--use-tabs', 'false' },
+        },
+        prettierd = {
+          prepend_args = { '--tab-width', '2', '--use-tabs', 'false' },
+        },
       },
     },
   },
