@@ -14,6 +14,14 @@ vim.o.mouse = 'a'
 -- Don't show the mode, since it's already in the status line
 vim.o.showmode = false
 
+-- Remove auto comment on new lines
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = '*',
+  callback = function()
+    vim.opt.formatoptions:remove { 'c', 'r', 'o' }
+  end,
+})
+
 -- Sync clipboard between OS and Neovim.
 --  Schedule the setting after `UiEnter` because it can increase startup-time.
 --  Remove this option if you want your OS clipboard to remain independent.
@@ -191,34 +199,34 @@ require('lazy').setup({
   },
 
   --{
-    --'tris203/precognition.nvim',
-    --event = "VeryLazy",
-    --opts = {
-      -- startVisible = true,
-      -- showBlankVirtLine = true,
-      -- highlightColor = { link = "Comment" },
-      -- hints = {
-      --      Caret = { text = "^", prio = 2 },
-      --      Dollar = { text = "$", prio = 1 },
-      --      MatchingPair = { text = "%", prio = 5 },
-      --      Zero = { text = "0", prio = 1 },
-      --      w = { text = "w", prio = 10 },
-      --      b = { text = "b", prio = 9 },
-      --      e = { text = "e", prio = 8 },
-      --      W = { text = "W", prio = 7 },
-      --      B = { text = "B", prio = 6 },
-      --      E = { text = "E", prio = 5 },
-      -- },
-      -- gutterHints = {
-      --     G = { text = "G", prio = 10 },
-      --     gg = { text = "gg", prio = 9 },
-      --     PrevParagraph = { text = "{", prio = 8 },
-      --     NextParagraph = { text = "}", prio = 8 },
-      -- },
-      -- disabled_fts = {
-      --     "startify",
-      -- },
-    --},
+  --'tris203/precognition.nvim',
+  --event = "VeryLazy",
+  --opts = {
+  -- startVisible = true,
+  -- showBlankVirtLine = true,
+  -- highlightColor = { link = "Comment" },
+  -- hints = {
+  --      Caret = { text = "^", prio = 2 },
+  --      Dollar = { text = "$", prio = 1 },
+  --      MatchingPair = { text = "%", prio = 5 },
+  --      Zero = { text = "0", prio = 1 },
+  --      w = { text = "w", prio = 10 },
+  --      b = { text = "b", prio = 9 },
+  --      e = { text = "e", prio = 8 },
+  --      W = { text = "W", prio = 7 },
+  --      B = { text = "B", prio = 6 },
+  --      E = { text = "E", prio = 5 },
+  -- },
+  -- gutterHints = {
+  --     G = { text = "G", prio = 10 },
+  --     gg = { text = "gg", prio = 9 },
+  --     PrevParagraph = { text = "{", prio = 8 },
+  --     NextParagraph = { text = "}", prio = 8 },
+  -- },
+  -- disabled_fts = {
+  --     "startify",
+  -- },
+  --},
   --},
 
   {
