@@ -30,8 +30,18 @@ vim.schedule(function()
   vim.o.clipboard = 'unnamedplus'
 end)
 
+----------------------------<{ Line Breaking }
 -- Enable break indent
 vim.o.breakindent = true
+-- Enable wrapping (natural by default)
+vim.opt.wrap = true
+-- Don't break words in the middle
+vim.opt.linebreak = true
+-- Make it break at spaces or punctuation nicely
+vim.opt.breakat = ' \t;:,!?'
+-- Optional: visually indicate a wrapped line
+vim.opt.showbreak = '↳ ' -- Or use '⤷ ', '… ', '-> ', etc.
+----------------------------<{ END: Line Breaking }
 
 -- Set default indentation settings
 vim.opt.tabstop = 2 -- Number of visual spaces per TAB
@@ -40,6 +50,11 @@ vim.opt.softtabstop = 2 -- Number of spaces Neovim uses when you hit <Tab>
 vim.opt.expandtab = true -- Use spaces instead of tabs
 vim.opt.smartindent = true -- Smart autoindenting on new lines
 vim.opt.autoindent = true -- Copy indent from current line when starting a new one
+
+vim.opt.foldmethod = 'expr'
+vim.opt.foldexpr = 'nvim_treesitter#foldexpr()'
+vim.opt.foldenable = true
+vim.opt.foldlevel = 99 -- Start with everything unfolded (like VSCode)
 
 -- Save undo history
 vim.o.undofile = true
@@ -72,7 +87,7 @@ vim.o.inccommand = 'split'
 vim.o.cursorline = true
 
 -- Minimal number of screen lines to keep above and below the cursor.
-vim.o.scrolloff = 15
+vim.o.scrolloff = 13
 
 -- if performing an operation that would fail due to unsaved changes in the buffer (like `:q`),
 -- instead raise a dialog asking if you wish to save the current file(s)
@@ -199,18 +214,18 @@ require('lazy').setup({
   },
 
   {
-  "otavioschwanck/arrow.nvim",
-  dependencies = {
-    { "nvim-tree/nvim-web-devicons" },
-    -- or if using `mini.icons`
-    -- { "echasnovski/mini.icons" },
+    'otavioschwanck/arrow.nvim',
+    dependencies = {
+      { 'nvim-tree/nvim-web-devicons' },
+      -- or if using `mini.icons`
+      -- { "echasnovski/mini.icons" },
+    },
+    opts = {
+      show_icons = true,
+      leader_key = ';', -- Recommended to be a single key
+      buffer_leader_key = 'm', -- Per Buffer Mappings
+    },
   },
-  opts = {
-    show_icons = true,
-    leader_key = ';', -- Recommended to be a single key
-    buffer_leader_key = 'm', -- Per Buffer Mappings
-  }
-},
 
   --{
   --'tris203/precognition.nvim',
