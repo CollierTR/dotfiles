@@ -40,7 +40,7 @@ vim.opt.linebreak = true
 -- Make it break at spaces or punctuation nicely
 vim.opt.breakat = ' \t;:,!?'
 -- Optional: visually indicate a wrapped line
-vim.opt.showbreak = '↳ ' -- Or use '⤷ ', '… ', '-> ', etc.
+vim.opt.showbreak = ' ↳ ' -- Or use '⤷ ', '… ', '-> ', etc.
 ----------------------------<{ END: Line Breaking }
 
 -- Set default indentation settings

@@ -16,6 +16,8 @@ cyn='\[\033[01;36m\]'   # Cyan
 wht='\[\033[01;37m\]'   # White
 clr='\[\033[00m\]'      # Reset
 
+export BROWSER="/mnt/c/Windows/System32/cmd.exe /c start"
+
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
