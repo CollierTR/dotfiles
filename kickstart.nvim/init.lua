@@ -51,10 +51,10 @@ vim.opt.expandtab = true -- Use spaces instead of tabs
 vim.opt.smartindent = true -- Smart autoindenting on new lines
 vim.opt.autoindent = true -- Copy indent from current line when starting a new one
 
-vim.opt.foldmethod = 'expr'
+--[[ vim.opt.foldmethod = 'expr'
 vim.opt.foldexpr = 'nvim_treesitter#foldexpr()'
 vim.opt.foldenable = true
-vim.opt.foldlevel = 99 -- Start with everything unfolded (like VSCode)
+vim.opt.foldlevel = 99 -- Start with everything unfolded (like VSCode) ]]
 
 -- Save undo history
 vim.o.undofile = true
