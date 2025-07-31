@@ -51,6 +51,10 @@ vim.opt.expandtab = true -- Use spaces instead of tabs
 vim.opt.smartindent = true -- Smart autoindenting on new lines
 vim.opt.autoindent = true -- Copy indent from current line when starting a new one
 
+-- Folds
+vim.opt.foldtext = ''
+vim.opt.foldlevel = 99
+
 -- Save and load folds automatically
 vim.api.nvim_create_autocmd({ 'BufWinLeave' }, {
   pattern = '*',
