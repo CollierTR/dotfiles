@@ -5,6 +5,11 @@
 # ps1_old="$PS1"
 #
 
+# Path Variables
+export TERM='xterm-256color'
+export EDITOR='nvim'
+export VISUAL='nvim'
+
 # Color Variables
 blk='\[\033[01;30m\]'   # Black
 red='\[\033[01;31m\]'   # Red
