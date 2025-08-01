@@ -56,9 +56,14 @@ vim.opt.foldtext = ''
 vim.opt.foldlevel = 99
 
 -- Save and load folds automatically
-vim.api.nvim_create_autocmd({ 'BufWinLeave' }, {
+vim.api.nvim_create_autocmd('BufWinLeave', {
   pattern = '*',
-  command = 'mkview',
+  callback = function()
+    local bufname = vim.api.nvim_buf_get_name(0)
+    if bufname ~= '' and vim.bo.buftype == '' then
+      vim.cmd 'mkview'
+    end
+  end,
 })
 vim.api.nvim_create_autocmd({ 'BufWinEnter' }, {
   pattern = '*',
