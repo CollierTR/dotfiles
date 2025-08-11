@@ -124,9 +124,9 @@ fi
 
 # some more ls aliases
 alias ls='lsd'
+alias l='ls -1'
 alias ll='lsd -alF'
 alias la='ls -A'
-alias l='ls -CF'
 
 # View the Git log.
 alias gl='git --no-pager log --oneline --graph'
@@ -195,7 +195,7 @@ PROMPT_COMMAND="find_git_branch; find_git_dirty; $PROMPT_COMMAND"
 # export PS1="\n ${grn}\W${red}\$(GIT_PS1_SHOWUNTRACKEDFILES=1 GIT_PS1_SHOWDIRTYSTATE=1 __git_ps1)${clr} $ "
 
 # This is a backup if the top doesn't work
-export PS1="\${debian_chroot:+(\$debian_chroot)}\n${pur}\$git_branch\$git_dirty\$git_closer${grn}\W ⮞ ${clr}"
+export PS1="\${debian_chroot:+(\$debian_chroot)}\n${pur}\$git_branch\$git_dirty\$git_closer${grn}\W \$ ${clr}"
 # -------------------------------------------------- end
 
 # View the calender by typing the first three letters of the month.
