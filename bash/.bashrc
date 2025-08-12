@@ -212,6 +212,12 @@ alias oct='cal -m 10'
 alias nov='cal -m 11'
 alias dec='cal -m 12'
 
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+
+
 # PS1="\A \h \$ " name and host name
 # PS1="\[\033[0;31m\]<\u@\h \W>\$\[\033[0m\] " make the prompt blood red
 # PS1="\[\033[s\033[0;0H\033[0;41m\033[K\033[1;33m\t\033[0m\033[u\]<\u@\h \W>\$ " draws a red bar and clock at the top of the term
