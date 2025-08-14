@@ -141,6 +141,7 @@ vim.keymap.set("n", "<leader>tn", "<cmd>set relativenumber!<CR>") -- toggle rela
 vim.keymap.set("n", "<leader>ts", "<cmd>set spell!<CR>") -- toggle spell-check
 vim.keymap.set("n", "<leader>tt", "<cmd>ToggleTerm size=40 dir=~/Desktop direction=float name=desktop <CR>") -- toggle terminal
 vim.keymap.set("n", "<leader>tc", "<cmd>Telescope colorscheme<CR>") -- toggle colorscheme
+vim.keymap.set("n", "<leader>tm", "<cmd>MarkdownPreviewToggle<CR>") -- toggle colorscheme
 
 -- NOTE: Some terminals have colliding keymaps or are not able to send distinct keycodes
 -- vim.keymap.set("n", "<C-S-h>", "<C-w>H", { desc = "Move window to the left" })
