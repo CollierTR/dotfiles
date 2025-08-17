@@ -135,7 +135,7 @@ alias gl='git --no-pager log --oneline --graph'
 alias cls='clear'
 
 # Bat command
-alias bat='batcat'
+alias bat='bat'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -212,11 +212,9 @@ alias oct='cal -m 10'
 alias nov='cal -m 11'
 alias dec='cal -m 12'
 
-
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
-
 
 # PS1="\A \h \$ " name and host name
 # PS1="\[\033[0;31m\]<\u@\h \W>\$\[\033[0m\] " make the prompt blood red
