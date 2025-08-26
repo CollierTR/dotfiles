@@ -141,6 +141,8 @@ alias bat='bat'
 
 todo() {
   echo " "
+  date +"%-I:%M %p" | lolcat
+  echo " "
   todoist sync
   echo "Today:"
   todoist --csv l -f today | awk -F',' -v now="$(date +%s)" 'NR>1 {
