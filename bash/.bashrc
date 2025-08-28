@@ -238,6 +238,8 @@ PROMPT_COMMAND="find_git_branch; find_git_dirty; $PROMPT_COMMAND"
 export PS1="\${debian_chroot:+(\$debian_chroot)}\n${pur}\$git_branch\$git_dirty\$git_closer${grn}\W \$ ${clr}"
 # -------------------------------------------------- end
 
+alias clock='tty-clock -cSt'
+
 # View the calender by typing the first three letters of the month.
 alias jan='cal -m 01'
 alias feb='cal -m 02'
