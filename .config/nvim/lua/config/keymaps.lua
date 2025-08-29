@@ -11,6 +11,9 @@ vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagn
 -- Key map for NVIM tree
 vim.keymap.set("n", "<leader>e", "<cmd>NvimTreeToggle<CR>") -- toggle file explorer
 
+-- Keymap for zen mode
+vim.keymap.set("n", "<leader>tz", "<cmd>ZenMode<CR>") -- toggle file explorer
+
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 -- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
 -- is not what someone will guess without a bit more experience.
