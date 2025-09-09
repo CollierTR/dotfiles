@@ -141,6 +141,9 @@ alias cls='clear'
 # Bat command
 alias bat='bat'
 
+# Shortcut to my window's dev folder
+alias windev='cd /mnt/c/Users/TristanCollier/Documents/Dev\ Projects/'
+
 todo() {
   echo " "
   date +"%-I:%M %p" | lolcat
