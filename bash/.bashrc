@@ -6,6 +6,8 @@
 #
 # Add Go bin to PATH
 export PATH="$HOME/go/bin:$PATH"
+# Add Spotify to PATH
+export PATH=$PATH:/var/lib/snapd/snap/bin
 
 # All the default Omarchy aliases and functions
 # (don't mess with these directly, just overwrite them here!)
