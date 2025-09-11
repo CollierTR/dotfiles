@@ -107,3 +107,6 @@ vim.o.scrolloff = 13
 -- instead raise a dialog asking if you wish to save the current file(s)
 -- See `:help 'confirm'`
 vim.o.confirm = true
+
+-- Set my spell dictionary
+vim.opt.spellfile = vim.fn.expand("~/.config/nvim/spell/en.utf-8.add")
