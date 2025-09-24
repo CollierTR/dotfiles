@@ -1,0 +1,6 @@
+if [ "$(acpi -a)" == "Adapter 0: on-line" ]
+then
+hyprctl keyword monitor "eDP-1, disable"
+else
+hyprctl keyword monitor "eDP-1,1920x1080,2560x0,1"
+fi
