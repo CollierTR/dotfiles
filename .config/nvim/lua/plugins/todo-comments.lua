@@ -4,5 +4,13 @@ return
   "folke/todo-comments.nvim",
   event = "VimEnter",
   dependencies = { "nvim-lua/plenary.nvim" },
-  opts = { signs = false },
+  opts = {
+    signs = true,
+    keywords = {
+      SECT = { icon = "🔷", color = "section", alt = { "SECTION", "sect", "section" } },
+    },
+    colors = {
+      section = { "Section", "#0074ba" },
+    },
+  },
 }
