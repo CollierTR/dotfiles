@@ -1,3 +1,10 @@
+-- FIX: I might have to add this back in
+
+--vim.g.lazyvim_check_order = false
+--require("options")
+--require("keymaps")
+--require("autocmds")
+
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
   local lazyrepo = "https://github.com/folke/lazy.nvim.git"
@@ -18,7 +25,7 @@ require("lazy").setup({
   spec = {
     -- add LazyVim and import its plugins
 
-    -- is this the issue?
+    -- FIX: is this the issue?
     { "LazyVim/LazyVim", import = "lazyvim.plugins" },
 
     -- import/override with your plugins

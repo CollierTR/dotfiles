@@ -224,6 +224,36 @@ return {
         -- But for many setups, the LSP (`ts_ls`) will work just fine
         -- ts_ls = {},
 
+        tailwindcss = {
+          filetypes = {
+            "astro",
+            "javascript",
+            "typescript",
+            "javascriptreact",
+            "typescriptreact",
+            "vue",
+            "svelte",
+            "html",
+            "css",
+            "scss",
+          },
+          settings = {
+            tailwindCSS = {
+              includeLanguages = {
+                astro = "html", -- Treat Astro files as HTML
+              },
+              experimental = {
+                classRegex = {
+                  -- Astro's class syntax
+                  "class:([\\w-]+)",
+                  -- E.g., for frameworks like Solid.js
+                  "class\\s*=\\s*['\"]([^'\"]*)['\"]",
+                },
+              },
+            },
+          },
+        },
+
         emmet_language_server = {
 
           filetypes = {
