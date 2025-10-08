@@ -3,7 +3,7 @@ return {
   dependencies = {
     { "nvim-tree/nvim-web-devicons" },
     -- or if using `mini.icons`
-    -- { "echasnovski/mini.icons" },
+    -- { "nvim-mini/mini.nvim" },
   },
   opts = {
     show_icons = true,
