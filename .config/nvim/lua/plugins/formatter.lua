@@ -39,6 +39,7 @@ return { -- Autoformat
       --typescript = { 'prettierd', 'prettier', stop_after_first = true },
       javascriptreact = { "prettierd", "prettier" },
       typescriptreact = { "prettierd", "prettier" },
+      astro = { "prettierd", "prettier" },
       html = { "prettierd", "prettier" },
       css = { "prettierd", "prettier" },
       json = { "prettierd", "prettier" },
