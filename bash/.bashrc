@@ -144,44 +144,6 @@ alias bat='bat'
 # Shortcut to my window's dev folder
 alias windev='cd /mnt/c/Users/TristanCollier/Documents/Dev\ Projects/'
 
-todo() {
-  echo " "
-  date +"%-I:%M %p" | lolcat
-  echo " "
-  todoist sync
-  echo "Today:"
-  todoist --csv l -f today | awk -F',' -v now="$(date +%s)" 'NR>1 {
-    gsub(/\([^)]+\)/,"",$3);                 # remove (Mon) etc
-    split($3, dt, " ");
-    d=dt[1]; t=dt[2];
-
-    split(d, dd, "/"); split(t, tt, ":");
-
-    # fix year and convert to numeric
-    Y = 2000 + dd[3] + 0
-    M = dd[2] + 0
-    D = dd[1] + 0
-    H = tt[1] + 0
-    MN = tt[2] + 0
-
-    due = mktime(Y " " M " " D " " H " " MN " 0")
-
-    # find content (last non-empty column)
-    for(i=NF;i>0;i--) if($i!="") {content=$i; break}
-
-    # convert to 12-hour format
-    hour12 = H % 12
-    if (hour12 == 0) hour12 = 12
-    ampm = (H < 12) ? "AM" : "PM"
-    timestr = hour12 ":" sprintf("%02d", MN) " " ampm
-
-    print due "|" timestr " → " content "|" (due < now ? "red" : "green")
-  }' | sort -n | awk -F'|' '{
-    color = ($3=="red") ? "\033[31m" : "\033[32m"
-    print color $2 "\033[0m"
-  }'
-}
-
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
