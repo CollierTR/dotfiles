@@ -8,6 +8,7 @@
 export PATH="$HOME/go/bin:$PATH"
 # Add Spotify to PATH
 export PATH=$PATH:/var/lib/snapd/snap/bin
+export PATH="$PATH:/home/tristan/.bash-scripts/"
 
 # All the default Omarchy aliases and functions
 # (don't mess with these directly, just overwrite them here!)
@@ -270,3 +271,6 @@ export NVM_DIR="$HOME/.nvm"
 
 # Vim Mode!
 set -o vi
+
+# Generated for envman. Do not edit.
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
