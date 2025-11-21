@@ -235,6 +235,8 @@ return {
             "svelte",
             "html",
             "css",
+            "jsx",
+            "tsx",
             "scss",
           },
           settings = {
@@ -252,6 +254,10 @@ return {
               },
             },
           },
+        },
+
+        astro = {
+          filetypes = { "astro" },
         },
 
         emmet_language_server = {
