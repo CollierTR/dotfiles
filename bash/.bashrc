@@ -135,7 +135,7 @@ alias la='ls -A'
 alias fetch='clear && fastfetch --logo none'
 
 # View the Git log.
-alias gl='git --no-pager log --oneline --graph'
+alias gl='git --no-pager log --oneline --graph --all'
 
 # Clear the Terminal
 alias cls='clear'
