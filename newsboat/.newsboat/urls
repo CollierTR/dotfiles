@@ -1,9 +1,41 @@
-https://www.omglinux.com/feed/
-https://feeds.megaphone.fm/FSI1483080183
-https://jamesclear.com/feed
-https://nodejs.org/en/feed/blog.xml
-https://feeds.feedburner.com/TheHackersNews
-https://www.bleepingcomputer.com/feed/
+# Tags:
+# - Linux
+# - Programming
+# - Power BI
+# - Security
+# - GitHub
+# - Productivity
+
+
+# ---------------------------------------\
+#  -----------------------<{ Productivity }
+# ---------------------------------------/
+https://jamesclear.com/feed Productivity
+
+# ---------------------------------------\
+#  ------------------------------<{ Linux }
+# ---------------------------------------/
+https://www.omglinux.com/feed/ Linux
+
+# ---------------------------------------\
+#  ---------------------------<{ Power BI }
+# ---------------------------------------/
 https://powerbi.microsoft.com/en-us/blog/feed/
-https://blog.boot.dev/index.xml
-https://www.freecodecamp.org/news/rss
+https://nodejs.org/en/feed/blog.xml Power-Bi
+
+# ---------------------------------------\
+#  ------------------------<{ Programming }
+# ---------------------------------------/
+https://blog.boot.dev/index.xml Programming
+https://www.freecodecamp.org/news/rss Programming
+
+# ---------------------------------------\
+#  ---------------------<{ Cyber Security }
+# ---------------------------------------/
+https://feeds.feedburner.com/TheHackersNews Security
+https://www.bleepingcomputer.com/feed/ Security
+
+# ---------------------------------------\
+#  ----------------------------<{ GitHub >}
+# ---------------------------------------/
+https://github.com/bossadapt.atom GitHub
