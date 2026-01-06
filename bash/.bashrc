@@ -91,8 +91,8 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # some more ls aliases
-alias ls='lsd'
-alias l='ls -1'
+alias ls='lsd --group-dirs first -X'
+alias l='ls --group-dirs first -X -1'
 alias ll='lsd -alF'
 alias la='ls -A'
 alias fetch='clear && fastfetch --logo none'
