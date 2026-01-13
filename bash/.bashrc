@@ -91,8 +91,8 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # some more ls aliases
-alias ls='lsd --group-dirs first -X'
-alias l='ls --group-dirs first -X -1'
+alias ls='lsd --group-dirs first'
+alias l='ls --group-dirs first -1'
 alias ll='lsd -alF'
 alias la='ls -A'
 alias fetch='clear && fastfetch --logo none'
@@ -102,6 +102,7 @@ alias gl='git --no-pager log --oneline --graph --all'
 
 # Clear the Terminal
 alias cls='clear'
+alias todo='rg -F -- "- [ ]"'
 
 # Shortcut to my window's dev folder
 alias windev='cd /mnt/c/Users/TristanCollier/Documents/Dev\ Projects/'
