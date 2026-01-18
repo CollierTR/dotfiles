@@ -103,6 +103,8 @@ alias gl='git --no-pager log --oneline --graph --all'
 # Clear the Terminal
 alias cls='clear'
 alias todo='rg -F -- "- [ ]"'
+alias hannah='rg -F -- "@hannah" ~/notebook'
+alias reset-hannah='rg -l "@hannah" ~/notebook --type md -0 | xargs -0 sed -i "/@hannah/d"'
 
 # Shortcut to my window's dev folder
 alias windev='cd /mnt/c/Users/TristanCollier/Documents/Dev\ Projects/'
