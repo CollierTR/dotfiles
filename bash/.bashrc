@@ -186,3 +186,7 @@ set -o vi
 
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+
+# For Arch on WSL bash completion
+[[ -r /usr/share/bash-completion/bash_completion ]] &&
+  source /usr/share/bash-completion/bash_completion
