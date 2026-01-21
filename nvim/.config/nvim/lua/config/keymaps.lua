@@ -8,8 +8,7 @@ vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 -- Diagnostic keymaps
 vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostic [Q]uickfix list" })
 
--- Key map for NVIM tree
-vim.keymap.set("n", "<leader>e", "<cmd>NvimTreeToggle<CR>") -- toggle file explorer
+
 
 -- Keymap for zen mode
 vim.keymap.set("n", "<leader>tz", "<cmd>ZenMode<CR>") -- toggle file explorer
