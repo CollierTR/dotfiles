@@ -1,10 +1,12 @@
 return {
   { "rebelot/kanagawa.nvim" },
   {
-    "LazyVim/LazyVim",
-    opts = {
-      --colorscheme = "kanagawa-dragon",
-      colorscheme = "tokyonight-night",
-    },
+    "folke/tokyonight.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {},
+    init = function()
+      vim.cmd("colorscheme tokyonight-night")
+    end,
   },
 }
