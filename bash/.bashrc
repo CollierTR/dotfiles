@@ -190,3 +190,4 @@ set -o vi
 # For Arch on WSL bash completion
 [[ -r /usr/share/bash-completion/bash_completion ]] &&
   source /usr/share/bash-completion/bash_completion
+export PATH="$HOME/.local/opt/go-bin-v1.25.6/bin:$PATH"

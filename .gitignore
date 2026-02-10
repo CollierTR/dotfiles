@@ -1,2 +1,8 @@
 cache.db
 cache.db.lock
+
+# Go tool telemetry/cache
+nvim/.config/go/
+
+# Netlify CLI local config/cache
+nvim/.config/netlify/
