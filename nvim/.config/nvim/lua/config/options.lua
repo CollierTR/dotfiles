@@ -1,5 +1,3 @@
-
-
 -- Set <space> as the leader key
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
@@ -18,10 +16,10 @@ vim.o.showmode = false
 
 -- Remove auto comment on new lines
 vim.api.nvim_create_autocmd("FileType", {
-  pattern = "*",
-  callback = function()
-    vim.opt.formatoptions:remove({ "c", "r", "o" })
-  end,
+	pattern = "*",
+	callback = function()
+		vim.opt.formatoptions:remove({ "c", "r", "o" })
+	end,
 })
 
 -- Sync clipboard between OS and Neovim.
@@ -29,7 +27,7 @@ vim.api.nvim_create_autocmd("FileType", {
 --  Remove this option if you want your OS clipboard to remain independent.
 --  See `:help 'clipboard'`
 vim.schedule(function()
-  vim.o.clipboard = "unnamedplus"
+	vim.o.clipboard = "unnamedplus"
 end)
 
 ----------------------------<{ Line Breaking }
@@ -59,17 +57,17 @@ vim.opt.foldlevel = 99
 
 -- Save and load folds automatically
 vim.api.nvim_create_autocmd("BufWinLeave", {
-  pattern = "*",
-  callback = function()
-    local bufname = vim.api.nvim_buf_get_name(0)
-    if bufname ~= "" and vim.bo.buftype == "" then
-      vim.cmd("mkview")
-    end
-  end,
+	pattern = "*",
+	callback = function()
+		local bufname = vim.api.nvim_buf_get_name(0)
+		if bufname ~= "" and vim.bo.buftype == "" then
+			vim.cmd("mkview")
+		end
+	end,
 })
 vim.api.nvim_create_autocmd({ "BufWinEnter" }, {
-  pattern = "*",
-  command = "silent! loadview",
+	pattern = "*",
+	command = "silent! loadview",
 })
 
 -- Save undo history
@@ -111,4 +109,5 @@ vim.o.scrolloff = 13
 vim.o.confirm = true
 
 -- Set my spell dictionary
+vim.opt.spell = true
 vim.opt.spellfile = vim.fn.expand("~/.config/nvim/spell/en.utf-8.add")
