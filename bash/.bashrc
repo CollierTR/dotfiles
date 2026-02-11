@@ -90,6 +90,8 @@ if [ -x /usr/bin/dircolors ]; then
   alias egrep='egrep --color=auto'
 fi
 
+alias anime='anipy-cli -p vlc'
+
 # some more ls aliases
 alias ls='lsd --group-dirs first'
 alias l='ls --group-dirs first -1'
@@ -191,3 +193,6 @@ set -o vi
 [[ -r /usr/share/bash-completion/bash_completion ]] &&
   source /usr/share/bash-completion/bash_completion
 export PATH="$HOME/.local/opt/go-bin-v1.25.6/bin:$PATH"
+
+# Created by `pipx` on 2026-02-11 17:33:30
+export PATH="$PATH:/home/neo/.local/bin"
