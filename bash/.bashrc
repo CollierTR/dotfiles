@@ -196,3 +196,4 @@ export PATH="$HOME/.local/opt/go-bin-v1.25.6/bin:$PATH"
 
 # Created by `pipx` on 2026-02-11 17:33:30
 export PATH="$PATH:/home/neo/.local/bin"
+export PATH="$PATH:~/.config/emacs/bin"
