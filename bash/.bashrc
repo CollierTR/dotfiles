@@ -109,6 +109,8 @@ alias cls='clear'
 alias todo='rg -F -- "- [ ]"'
 alias hannah='rg -F -- "@hannah" ~/notebook'
 alias reset-hannah='rg -l "@hannah" ~/notebook --type md -0 | xargs -0 sed -i "/@hannah/d"'
+alias prayer='rg -F -- "@prayer" ~/notebook'
+alias reset-prayer='rg -l "@prayer" ~/notebook --type md -0 | xargs -0 sed -i "/@prayer/d"'
 
 tags() {
   rg -o --no-filename -g '*.md' '#[A-Za-z0-9_]+' . \
