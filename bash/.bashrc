@@ -104,9 +104,32 @@ alias gl='git --no-pager log --oneline --graph --all'
 
 # Clear the Terminal
 alias cls='clear'
+
+# Notebook alias
 alias todo='rg -F -- "- [ ]"'
 alias hannah='rg -F -- "@hannah" ~/notebook'
 alias reset-hannah='rg -l "@hannah" ~/notebook --type md -0 | xargs -0 sed -i "/@hannah/d"'
+
+tags() {
+  rg -o --no-filename -g '*.md' '#[A-Za-z0-9_]+' . \
+    | sort \
+    | uniq -c
+}
+
+findtag() {
+  if [ -z "$1" ]; then
+    echo "Usage: tagfind <tag>"
+    return 1
+  fi
+
+  rg -il -g '*.md' "(^|\\s)#$1\\b" .
+}
+
+labels() {
+  rg --no-filename -g '*.md' '@[A-Za-z0-9_]+' . \
+    | sort
+}
+
 
 # Shortcut to my window's dev folder
 alias windev='cd /mnt/c/Users/TristanCollier/Documents/Dev\ Projects/'
