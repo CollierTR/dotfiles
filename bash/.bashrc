@@ -14,6 +14,11 @@ if [ -r ~/.local/share/omarchy/default/bash/rc ]; then
   source ~/.local/share/omarchy/default/bash/rc
 fi
 
+# load modular bash files
+for file in ~/.bashrc.d/*.sh; do
+  [ -r "$file" ] && source "$file"
+done
+
 # Path Variables
 export TERM='xterm-256color'
 export EDITOR='nvim'
@@ -222,3 +227,4 @@ export PATH="$HOME/.local/opt/go-bin-v1.25.6/bin:$PATH"
 # Created by `pipx` on 2026-02-11 17:33:30
 export PATH="$PATH:/home/neo/.local/bin"
 export PATH="$PATH:~/.config/emacs/bin"
+
