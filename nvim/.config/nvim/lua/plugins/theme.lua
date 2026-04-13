@@ -3,6 +3,10 @@ return {
 	{ "luisiacc/the-matrix.nvim" },
 	{ "AlexvZyl/nordic.nvim" },
 	{ "ellisonleao/gruvbox.nvim" },
+	{ "sainnhe/gruvbox-material" },
+	{ "trapd00r/neverland-vim-theme" },
+	{ "zabanaa/neuromancer.vim" },
+	{ "ayaz-amin/cyberpunk.nvim" },
 	{
 		"folke/tokyonight.nvim",
 		lazy = false,
