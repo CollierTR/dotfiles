@@ -8,11 +8,6 @@ export PATH="$HOME/go/bin:$PATH"
 export PATH=$PATH:/var/lib/snapd/snap/bin
 export PATH="$PATH:/home/tristan/.bash-scripts/"
 
-# All the default Omarchy aliases and functions
-# (don't mess with these directly, just overwrite them here!)
-if [ -r ~/.local/share/omarchy/default/bash/rc ]; then
-  source ~/.local/share/omarchy/default/bash/rc
-fi
 
 # load modular bash files
 for file in ~/.bashrc.d/*.sh; do
@@ -95,27 +90,6 @@ if [ -x /usr/bin/dircolors ]; then
   alias egrep='egrep --color=auto'
 fi
 
-alias anime='anipy-cli -p vlc'
-
-# some more ls aliases
-alias ls='lsd --group-dirs first'
-alias l='ls --group-dirs first -1'
-alias ll='lsd -alF'
-alias la='ls -A'
-alias fetch='clear && fastfetch --logo none'
-
-# View the Git log.
-alias gl='git --no-pager log --oneline --graph --all'
-
-# Clear the Terminal
-alias cls='clear'
-
-# Notebook alias
-alias todo='rg -F -- "- [ ]"'
-alias hannah='rg -F -- "@hannah" ~/notebook'
-alias reset-hannah='rg -l "@hannah" ~/notebook --type md -0 | xargs -0 sed -i "/@hannah/d"'
-alias prayer='rg -F -- "@prayer" ~/notebook'
-alias reset-prayer='rg -l "@prayer" ~/notebook --type md -0 | xargs -0 sed -i "/@prayer/d"'
 
 tags() {
   rg -o --no-filename -g '*.md' '#[A-Za-z0-9_]+' . \
@@ -138,17 +112,7 @@ labels() {
 }
 
 
-# Shortcut to my window's dev folder
-alias windev='cd /mnt/c/Users/TristanCollier/Documents/Dev\ Projects/'
 
-# Add an "alert" alias for long running commands.  Use like so:
-#   sleep 10; alert
-alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
-
-# If there is a .bash_aliases file then load it
-if [ -f ~/.bash_aliases ]; then
-  . ~/.bash_aliases
-fi
 
 # enable programmable completion features
 if ! shopt -oq posix; then
@@ -193,21 +157,6 @@ PROMPT_COMMAND="find_git_branch; find_git_dirty; $PROMPT_COMMAND"
 export PS1="\${debian_chroot:+(\$debian_chroot)}\n${pur}\$git_branch\$git_dirty\$git_closer${grn}\W \$ ${clr}"
 # -------------------------------------------------- end
 
-alias clock='tty-clock -cSt'
-
-# View the calender by typing the first three letters of the month.
-alias jan='cal -m 01'
-alias feb='cal -m 02'
-alias mar='cal -m 03'
-alias apr='cal -m 04'
-alias may='cal -m 05'
-alias jun='cal -m 06'
-alias jul='cal -m 07'
-alias aug='cal -m 08'
-alias sep='cal -m 09'
-alias oct='cal -m 10'
-alias nov='cal -m 11'
-alias dec='cal -m 12'
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
