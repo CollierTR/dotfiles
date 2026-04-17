@@ -32,7 +32,7 @@ alias anime='anipy-cli -p vlc'
 
 # some more ls aliases
 alias ls='lsd --group-dirs first'
-alias l='ls --group-dirs first -1'
+alias l='lsd --group-dirs first -1'
 alias ll='lsd -alF'
 alias la='ls -A'
 alias fetch='clear && fastfetch --logo none'
