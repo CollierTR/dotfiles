@@ -177,3 +177,6 @@ export PATH="$HOME/.local/opt/go-bin-v1.25.6/bin:$PATH"
 export PATH="$PATH:/home/neo/.local/bin"
 export PATH="$PATH:~/.config/emacs/bin"
 
+
+export SSL_CERT_FILE=/etc/ssl/certs/ca-certificates.crt
+export REQUESTS_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt
