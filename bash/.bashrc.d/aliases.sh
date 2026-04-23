@@ -49,3 +49,5 @@ alias hannah='rg -F -- "@hannah" ~/notebook'
 alias reset-hannah='rg -l "@hannah" ~/notebook --type md -0 | xargs -0 sed -i "/@hannah/d"'
 alias prayer='rg -F -- "@prayer" ~/notebook'
 alias reset-prayer='rg -l "@prayer" ~/notebook --type md -0 | xargs -0 sed -i "/@prayer/d"'
+
+alias bible="nvim +BibleRead"
