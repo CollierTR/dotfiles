@@ -52,3 +52,5 @@ alias prayer='rg -F -- "@prayer" ~/notebook'
 alias reset-prayer='rg -l "@prayer" ~/notebook --type md -0 | xargs -0 sed -i "/@prayer/d"'
 
 alias bible="nvim +BibleRead"
+
+alias loc="git ls-files | xargs wc -l"
