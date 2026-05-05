@@ -8,8 +8,6 @@ vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 -- Diagnostic keymaps
 vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostic [Q]uickfix list" })
 
-
-
 -- Keymap for zen mode
 vim.keymap.set("n", "<leader>tz", "<cmd>ZenMode<CR>") -- toggle file explorer
 
@@ -36,6 +34,15 @@ vim.keymap.set("n", "<leader>tc", "<cmd>Telescope colorscheme<CR>") -- toggle co
 vim.keymap.set("n", "<leader>tm", "<cmd>MarkdownPreviewToggle<CR>") -- toggle colorscheme
 vim.keymap.set("n", "<leader>tg", "<cmd>GitBlameToggle<CR>") -- toggle git blame info line
 
+-- Reload/Refresh
+vim.keymap.set("n", "<leader>r", function()
+	vim.cmd("checktime")
+
+	if vim.wo.diff then
+		vim.cmd("diffupdate")
+	end
+end, { desc = "Refresh buffers (diff-aware)" })
+
 -- Folding keymaps
 vim.keymap.set("n", "<leader>z", "za", { desc = "Toggle fold under cursor" })
 vim.keymap.set("n", "<leader>Z", "zA", { desc = "Toggle all folds under cursor" })
@@ -48,3 +55,4 @@ vim.api.nvim_create_user_command("Fold", "normal! za", { desc = "Toggle fold und
 -- vim.keymap.set("n", "<C-S-l>", "<C-w>L", { desc = "Move window to the right" })
 -- vim.keymap.set("n", "<C-S-j>", "<C-w>J", { desc = "Move window to the lower" })
 -- vim.keymap.set("n", "<C-S-k>", "<C-w>K", { desc = "Move window to the upper" })
+

@@ -110,6 +110,13 @@ vim.o.scrolloff = 13
 -- See `:help 'confirm'`
 vim.o.confirm = true
 
+-- Auto update a buffer with external changes (ex: AI Agent changes)
+vim.o.autoread = true
+vim.api.nvim_create_autocmd({ "FocusGained", "BufEnter" }, {
+	pattern = "*",
+	command = "silent! checktime",
+})
+
 -- Set my spell dictionary
 vim.opt.spell = true
 vim.opt.spellfile = vim.fn.expand("~/.config/nvim/spell/en.utf-8.add")
