@@ -52,8 +52,10 @@ vim.opt.smartindent = true -- Smart autoindenting on new lines
 vim.opt.autoindent = true -- Copy indent from current line when starting a new one
 
 -- Folds
-vim.opt.foldtext = ""
+vim.opt.foldcolumn = "1"
 vim.opt.foldlevel = 99
+vim.opt.foldlevelstart = 99
+vim.opt.foldenable = true
 
 -- Save and load folds automatically
 vim.api.nvim_create_autocmd("BufWinLeave", {

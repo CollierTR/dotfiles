@@ -36,6 +36,13 @@ vim.keymap.set("n", "<leader>tc", "<cmd>Telescope colorscheme<CR>") -- toggle co
 vim.keymap.set("n", "<leader>tm", "<cmd>MarkdownPreviewToggle<CR>") -- toggle colorscheme
 vim.keymap.set("n", "<leader>tg", "<cmd>GitBlameToggle<CR>") -- toggle git blame info line
 
+-- Folding keymaps
+vim.keymap.set("n", "<leader>z", "za", { desc = "Toggle fold under cursor" })
+vim.keymap.set("n", "<leader>Z", "zA", { desc = "Toggle all folds under cursor" })
+
+-- Folding command
+vim.api.nvim_create_user_command("Fold", "normal! za", { desc = "Toggle fold under cursor" })
+
 -- NOTE: Some terminals have colliding keymaps or are not able to send distinct keycodes
 -- vim.keymap.set("n", "<C-S-h>", "<C-w>H", { desc = "Move window to the left" })
 -- vim.keymap.set("n", "<C-S-l>", "<C-w>L", { desc = "Move window to the right" })
