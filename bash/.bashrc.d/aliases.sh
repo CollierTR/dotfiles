@@ -19,6 +19,7 @@ alias dec='cal -m 12'
 
 # Shortcut to my window's dev folder
 alias windev='cd /mnt/c/Users/TristanCollier/Documents/Dev\ Projects/'
+alias pbi='cd "/mnt/c/Users/TristanCollier/Bonnie Plants/Elizabeth Dovre - Bonnie Analytics 2.0/PowerBI Reporting/Current PBI Files/Power BI 2.0"'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
