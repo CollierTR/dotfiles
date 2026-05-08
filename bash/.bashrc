@@ -2,6 +2,8 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
+source "$HOME/.env"
+
 # Color Variables
 blk='\[\033[01;30m\]' # Black
 red='\[\033[01;31m\]' # Red

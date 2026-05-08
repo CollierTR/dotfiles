@@ -16,5 +16,17 @@
       "rm *": "deny",
       "git log *": "allow"
     }
+  },
+
+  "mcp": {
+    "todoist": {
+      "type": "local",
+      "command": ["npx", "-y", "mcp-remote", "https://ai.todoist.net/mcp"],
+      "enabled": true,
+      "environment": {
+        "TODOIST_API_KEY": "{env:TODOIST_API_KEY}",
+        "NODE_EXTRA_CA_CERTS": "/etc/ssl/certs/ca-certificates.crt"
+      }
+    }
   }
 }
