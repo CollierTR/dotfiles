@@ -134,3 +134,4 @@ set -o vi
 for file in ~/.bashrc.d/*.sh; do
   [ -r "$file" ] && source "$file"
 done
+export NODE_EXTRA_CA_CERTS=/usr/local/share/ca-certificates/zscaler.crt
