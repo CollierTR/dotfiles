@@ -1,6 +1,5 @@
 # A home for aliases
 
-
 alias clock='tty-clock -cSt'
 
 # View the calender by typing the first three letters of the month.
@@ -41,7 +40,6 @@ alias fetch='clear && fastfetch --logo none'
 # View the Git log.
 alias gl='git --no-pager log --graph --oneline --decorate --color | tac'
 
-
 # Clear the Terminal
 alias cls='clear'
 
@@ -55,3 +53,5 @@ alias reset-prayer='rg -l "@prayer" ~/notebook --type md -0 | xargs -0 sed -i "/
 alias bible="nvim +BibleRead"
 
 alias loc="git ls-files | xargs wc -l"
+
+alias speak="espeak-ng -v en-us+m3"

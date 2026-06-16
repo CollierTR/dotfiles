@@ -6,3 +6,5 @@ nvim/.config/go/
 
 # Netlify CLI local config/cache
 nvim/.config/netlify/
+
+node_modules/
