@@ -1,1 +1,0 @@
-/home/tristan/.config/omarchy/current/theme/neovim.lua
