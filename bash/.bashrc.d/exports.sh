@@ -27,3 +27,8 @@ export PATH="$HOME/go/bin:$PATH"
 export PATH=$PATH:/var/lib/snapd/snap/bin
 export PATH="$PATH:/home/tristan/.scripts/"
 
+ZSCALER_CERT="/usr/local/share/ca-certificates/zscaler.crt"
+
+if [[ -f "$ZSCALER_CERT" ]]; then
+    export NODE_EXTRA_CA_CERTS="$ZSCALER_CERT"
+fi
