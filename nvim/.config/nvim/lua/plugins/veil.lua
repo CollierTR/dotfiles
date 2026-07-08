@@ -4,6 +4,10 @@ return {
 	config = function()
 		require("veil").setup({
 			auto_enable = true,
+			keymaps = {
+				toggle = "<leader>tv",
+				peek = "<leader>tp",
+			},
 		})
 	end,
 }
