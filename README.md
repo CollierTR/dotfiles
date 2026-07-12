@@ -9,9 +9,12 @@ bootstrap script, no nonsense.
 
 modules mirror their install path under `$HOME`:
 
-| directory     | installs to                      |
-|---------------|----------------------------------|
-| `bash/`       | `~/.bashrc`, `~/.bashrc.d/`, `~/.inputrc` |
+| directory           | installs to                        |
+|---------------------|------------------------------------|
+| `alacritty.global/` | `~/.config/alacritty/` (shared)    |
+| `alacritty.linux/`  | `~/.config/alacritty/` (Linux)     |
+| `alacritty.windows/`| `~/.config/alacritty/` (Windows)   |
+| `bash/`             | `~/.bashrc`, `~/.bashrc.d/`, `~/.inputrc` |
 | `hyprland/`   | `~/.config/hypr/`                |
 | `keyd/`       | `/etc/keyd/`                     |
 | `newsboat/`   | `~/.newsboat/`                   |
@@ -22,6 +25,15 @@ modules mirror their install path under `$HOME`:
 | `wallpaper/`  | image files (no install target)  |
 
 ## breakdown
+
+### alacritty
+
+Three packages for cross-platform terminal config:
+- `alacritty.global` — shared settings (theme, fonts, padding). Stow on every OS.
+- `alacritty.linux` — Linux overrides (`os.toml`). Stow on Linux only.
+- `alacritty.windows` — Windows overrides (`os.toml` with `wsl.exe` shell).
+
+`alacritty.toml` uses `import = ["os.toml"]` so each OS provides its own overrides file.
 
 ### bash
 
@@ -98,6 +110,8 @@ clone to `~/.dotfiles` and use GNU Stow:
 ```sh
 git clone <repo> ~/.dotfiles
 cd ~/.dotfiles
+stow alacritty.global  # .config/alacritty (shared)
+stow alacritty.linux   # .config/alacritty (Linux)
 stow bash       # .bashrc, .bashrc.d, .inputrc
 stow nvim       # .config/nvim
 stow tmux       # .tmux.conf

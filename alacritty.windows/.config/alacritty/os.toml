@@ -1,0 +1,5 @@
+# Windows-specific overrides
+
+[shell]
+program = "wsl.exe"
+args = ["~"]
