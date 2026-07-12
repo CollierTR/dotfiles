@@ -23,11 +23,31 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 
 -- Sync clipboard between OS and Neovim.
---  Schedule the setting after `UiEnter` because it can increase startup-time.
---  Remove this option if you want your OS clipboard to remain independent.
+--  Detect WSL, native Wayland, and other environments.
 --  See `:help 'clipboard'`
 vim.schedule(function()
-	vim.o.clipboard = "unnamedplus"
+	if vim.env.WSL_DISTRO_NAME then
+		vim.g.clipboard = {
+			name = "WslClipboard",
+			copy = {
+				["+"] = "clip.exe",
+				["*"] = "clip.exe",
+			},
+			paste = {
+				["+"] = "powershell.exe -c [Console]::In.ReadToEnd()",
+				["*"] = "powershell.exe -c [Console]::In.ReadToEnd()",
+			},
+			cache_enabled = 0,
+		}
+		vim.o.clipboard = "unnamedplus"
+	elseif vim.env.WAYLAND_DISPLAY and vim.env.XDG_RUNTIME_DIR then
+		local socket = vim.env.XDG_RUNTIME_DIR .. "/" .. vim.env.WAYLAND_DISPLAY
+		if vim.fn.filereadable(socket) == 1 then
+			vim.o.clipboard = "unnamedplus"
+		end
+	else
+		vim.o.clipboard = "unnamedplus"
+	end
 end)
 
 ----------------------------<{ Line Breaking }
