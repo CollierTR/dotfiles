@@ -1,5 +1,5 @@
 # Windows-specific overrides
 
-[shell]
+[terminal.shell]
 program = "wsl.exe"
 args = ["~"]

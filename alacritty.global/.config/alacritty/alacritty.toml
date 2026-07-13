@@ -4,18 +4,18 @@ import = ["os.toml"]
 [window]
 padding = { x = 10, y = 10 }
 dynamic_padding = true
-opacity = 0.95
+opacity = 1.0
 blur = true
 
 [font]
 size = 11.0
 
 [font.normal]
-family = "JetBrains Mono"
+family = "JetBrainsMonoNL Nerd Font Mono"
 style = "Regular"
 
 [font.bold]
-family = "JetBrains Mono"
+family = "JetBrainsMonoNL Nerd Font Mono"
 style = "Bold"
 
 [colors.primary]
