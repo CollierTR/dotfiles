@@ -26,7 +26,9 @@ vim.api.nvim_create_autocmd("FileType", {
 --  Detect WSL, native Wayland, and other environments.
 --  See `:help 'clipboard'`
 vim.schedule(function()
-	if vim.env.WSL_DISTRO_NAME then
+	if vim.env.WSL_DISTRO_NAME and vim.env.WAYLAND_DISPLAY and vim.env.XDG_RUNTIME_DIR then
+		vim.o.clipboard = "unnamedplus"
+	elseif vim.env.WSL_DISTRO_NAME then
 		vim.g.clipboard = {
 			name = "WslClipboard",
 			copy = {
@@ -34,8 +36,8 @@ vim.schedule(function()
 				["*"] = "clip.exe",
 			},
 			paste = {
-				["+"] = "powershell.exe -c [Console]::In.ReadToEnd()",
-				["*"] = "powershell.exe -c [Console]::In.ReadToEnd()",
+				["+"] = 'powershell.exe -c "[Console]::In.ReadToEnd()"',
+				["*"] = 'powershell.exe -c "[Console]::In.ReadToEnd()"',
 			},
 			cache_enabled = 0,
 		}

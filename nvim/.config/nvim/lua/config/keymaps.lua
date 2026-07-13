@@ -34,6 +34,11 @@ vim.keymap.set("n", "<leader>tc", "<cmd>Telescope colorscheme<CR>") -- toggle co
 vim.keymap.set("n", "<leader>tm", "<cmd>MarkdownPreviewToggle<CR>") -- toggle colorscheme
 vim.keymap.set("n", "<leader>tg", "<cmd>GitBlameToggle<CR>") -- toggle git blame info line
 
+-- Bible Keymaps
+vim.keymap.set("n", "<leader>br", "<cmd>BibleRead<CR>", { desc = "Open Bible Reader" })
+vim.keymap.set("n", "<leader>bn", "<cmd>BibleNextChapter<CR>", { desc = "Next Bible Chapter" })
+vim.keymap.set("n", "<leader>bp", "<cmd>BiblePreviousChapter<CR>", { desc = "Prev Bible Chapter" })
+
 -- Reload/Refresh
 vim.keymap.set("n", "<leader>r", function()
 	vim.cmd("checktime")
@@ -55,4 +60,3 @@ vim.api.nvim_create_user_command("Fold", "normal! za", { desc = "Toggle fold und
 -- vim.keymap.set("n", "<C-S-l>", "<C-w>L", { desc = "Move window to the right" })
 -- vim.keymap.set("n", "<C-S-j>", "<C-w>J", { desc = "Move window to the lower" })
 -- vim.keymap.set("n", "<C-S-k>", "<C-w>K", { desc = "Move window to the upper" })
-
