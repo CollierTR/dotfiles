@@ -23,7 +23,6 @@ https://hypr.land/rss.xml
 #  ---------------------------<{ Power BI }
 # ---------------------------------------/
 https://powerbi.microsoft.com/en-us/blog/feed/
-https://nodejs.org/en/feed/blog.xml Power-Bi
 
 # ---------------------------------------\
 #  ------------------------<{ Programming }
@@ -33,17 +32,23 @@ https://www.freecodecamp.org/news/rss Programming
 https://www.alexhyett.com/feed/feed.rss.xml
 https://feeds.transistor.fm/origins-fm
 https://world.hey.com/dhh/feed.atom
+https://dev.to/rss
+https://blog.pragmaticengineer.com/rss/
+https://blog.bytebytego.com/feed
+https://www.computerenhance.com/feed
+https://www.akalin.com/feed/atom
+https://www.snellman.net/blog/rss-index.xml
+https://feeds.feedblitz.com/scotthanselman
+https://blog.cwa.me.uk/feed/
+http://feeds.haacked.com/haacked
 
 # ---------------------------------------\
 #  ---------------------<{ Cyber Security }
 # ---------------------------------------/
-https://feeds.feedburner.com/TheHackersNews Security
 https://www.bleepingcomputer.com/feed/ Security
-https://www.cisa.gov/news.xml
 
 # ---------------------------------------\
 #  ----------------------------<{ GitHub >}
 # ---------------------------------------/
 https://github.com/bossadapt.atom GitHub
-
 https://www.crosswire.org/sword/sword.rss.jsp
