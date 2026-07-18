@@ -8,7 +8,7 @@ opacity = 1.0
 blur = true
 
 [font]
-size = 11.0
+size = 14.5
 
 [font.normal]
 family = "JetBrainsMonoNL Nerd Font Mono"
@@ -71,6 +71,7 @@ binding = { key = "F", mods = "Control|Shift" }
 
 [keyboard]
 bindings = [
-  { key = "V", mods = "Control", action = "None" },
+  # { key = "V", mods = "Control", chars = "\u0016" }, # Send Ctrl+V
+  # { key = "V", mods = "Control", action = "None" },
   { key = "V", mods = "Control|Shift", action = "Paste" },
 ]
