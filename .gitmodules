@@ -1,0 +1,6 @@
+[submodule "ahk/windows-keybindings"]
+	path = ahk/windows-keybindings
+	url = https://github.com/CollierTR/windows-keybindings
+[submodule "ahk/vd-commander"]
+	path = ahk/vd-commander
+	url = https://github.com/CollierTR/VD-Commander
