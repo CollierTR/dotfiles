@@ -53,5 +53,6 @@ alias reset-prayer='rg -l "@prayer" ~/notebook --type md -0 | xargs -0 sed -i "/
 alias bible="nvim +BibleRead"
 
 alias loc="git ls-files | xargs wc -l"
+alias loc='git ls-files | grep -Evi "\.(png|jpg|jpeg|svg|gif|webp|ico)$" | xargs wc -l'
 
 alias speak="espeak-ng -v en-us+m3"
