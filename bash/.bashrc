@@ -136,3 +136,5 @@ for file in ~/.bashrc.d/*.sh; do
 done
 source <(kubectl completion bash)
 export PATH="$PATH:$HOME/.dotnet/tools"
+export PATH="$HOME/bin:$PATH"
+export PATH="$PATH:/mnt/c/Program\ Files/cursor/Cursor.exe"
