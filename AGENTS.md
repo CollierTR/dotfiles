@@ -32,7 +32,7 @@ wallpaper/   → image files (no install script)
 - Core config in `lua/config/` (lazy.lua, keymaps.lua, options.lua, autocmds.lua).
 - Plugin versions pinned via `lazy-lock.json` — commit this file after adding
   or updating plugins.
-- Colorscheme defaults to `gruvbox` (set in `plugins/theme.lua`).
+- Colorscheme defaults to `specter` (set in `plugins/theme.lua`).
 - Leader key: space. Keymaps in `lua/config/keymaps.lua`.
 - Completion engine: `blink.cmp` (not nvim-cmp). Config in `plugins/auto-completion.lua`.
 - File explorer: `nvim-tree` on the **right** side with `adaptive_size = true`.

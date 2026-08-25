@@ -56,3 +56,5 @@ alias loc="git ls-files | xargs wc -l"
 alias loc='git ls-files | grep -Evi "\.(png|jpg|jpeg|svg|gif|webp|ico)$" | xargs wc -l'
 
 alias speak="espeak-ng -v en-us+m3"
+
+alias k8="kubectl"

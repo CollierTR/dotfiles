@@ -4,13 +4,13 @@
 
 source "$HOME/.env"
 
-# Color Variables
+# Color Variables (truecolor for Spectere — 16-color purple/green collide)
 blk='\[\033[01;30m\]' # Black
-red='\[\033[01;31m\]' # Red
-grn='\[\033[01;32m\]' # Green
+red='\[\033[38;2;221;68;68m\]'   # #DD4444
+grn='\[\033[38;2;85;187;85m\]'   # #55BB55
 ylw='\[\033[01;33m\]' # Yellow
 blu='\[\033[01;34m\]' # Blue
-pur='\[\033[01;35m\]' # Purple
+pur='\[\033[38;2;187;85;187m\]'  # #BB55BB — magenta (Spectere maps ANSI magenta to green)
 cyn='\[\033[01;36m\]' # Cyan
 wht='\[\033[01;37m\]' # White
 clr='\[\033[00m\]'    # Reset
@@ -138,3 +138,4 @@ source <(kubectl completion bash)
 export PATH="$PATH:$HOME/.dotnet/tools"
 export PATH="$HOME/bin:$PATH"
 export PATH="$PATH:/mnt/c/Program\ Files/cursor/Cursor.exe"
+export PATH="$HOME/.local/share/gem/ruby/3.2.0/bin:$PATH"

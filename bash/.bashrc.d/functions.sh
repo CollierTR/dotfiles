@@ -40,3 +40,21 @@ timer() {
 
   powershell.exe -c "[console]::beep(1000,500)"
 }
+
+issues() {
+  if [[ "$1" == "-m" ]]; then
+    gh search issues --assignee @me --state open
+  else
+    gh search issues --owner @me --state open
+  fi
+}
+
+work-issues() {
+  if [[ "$1" == "-m" ]]; then
+    az boards query --wiql "SELECT [System.Id], [System.Title], [System.State], [System.WorkItemType] FROM WorkItems WHERE [System.State] <> 'Done' AND [System.AssignedTo] = @me ORDER BY [System.Id]" -o table
+    gh search issues --owner Bonnie-Plants-LLC --state open --assignee @me
+  else
+    az boards query --wiql "SELECT [System.Id], [System.Title], [System.State], [System.WorkItemType] FROM WorkItems WHERE [System.State] <> 'Done' ORDER BY [System.Id]" -o table
+    gh search issues --owner Bonnie-Plants-LLC --state open
+  fi
+}

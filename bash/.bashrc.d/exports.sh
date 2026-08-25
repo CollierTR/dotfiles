@@ -9,7 +9,7 @@ export TERM='xterm-256color'
 export EDITOR='nvim'
 export VISUAL='nvim'
 
-export BROWSER="/mnt/c/Windows/System32/cmd.exe /c start"
+export BROWSER="/mnt/c/Program Files/Google/Chrome/Application/chrome.exe"
 
 # Created by `pipx` on 2026-02-11 17:33:30
 export PATH="$PATH:$HOME/.local/bin"
