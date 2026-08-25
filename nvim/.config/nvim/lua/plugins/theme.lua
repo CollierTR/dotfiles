@@ -1,19 +1,25 @@
 return {
 	{ "rebelot/kanagawa.nvim" },
 	{ "luisiacc/the-matrix.nvim" },
-	{ "AlexvZyl/nordic.nvim" },
 	{ "ellisonleao/gruvbox.nvim" },
 	{ "sainnhe/gruvbox-material" },
-	{ "trapd00r/neverland-vim-theme" },
-	{ "zabanaa/neuromancer.vim" },
-	{ "ayaz-amin/cyberpunk.nvim" },
+	{ "xero/miasma.nvim" },
+	{ "xero/evangelion.nvim" },
+	{ "thallada/farout.nvim" },
+	{ "ptdewey/darkearth-nvim" },
+	{ "mrpbennett/vault" },
 	{
-		"folke/tokyonight.nvim",
+		dir = "/home/tristan/projects/nvim-theme",
+		name = "tenebris.nvim",
+	},
+	{
+		"CollierTR/specter.nvim",
 		lazy = false,
 		priority = 1000,
-		opts = {},
-		init = function()
-			vim.cmd("colorscheme gruvbox")
+		config = function()
+			vim.cmd("colorscheme specter")
 		end,
 	},
+
+	{ "folke/tokyonight.nvim" },
 }

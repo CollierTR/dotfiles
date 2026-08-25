@@ -5,6 +5,9 @@ vim.g.maplocalleader = " "
 -- Set to true if you have a Nerd Font installed and selected in the terminal
 vim.g.have_nerd_font = true
 
+-- Required for hex colorschemes (e.g. specter); without this, guifg/guibg are ignored
+vim.o.termguicolors = true
+
 vim.o.number = true
 vim.o.relativenumber = true
 

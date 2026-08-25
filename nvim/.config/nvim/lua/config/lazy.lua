@@ -1,3 +1,6 @@
+-- Options before plugins so termguicolors is on when colorschemes load
+require("config.options")
+
 require("lazy").setup({
 	spec = {
 		{ import = "plugins" },
@@ -6,7 +9,7 @@ require("lazy").setup({
 		lazy = false,
 		version = false,
 	},
-	install = { colorscheme = { "tokyonight", "habamax" } },
+	install = { colorscheme = { "specter", "habamax" } },
 	checker = {
 		enabled = true,
 		notify = false,
@@ -43,5 +46,4 @@ require("lazy").setup({
 })
 
 require("config.autocmds")
-require("config.options")
 require("config.keymaps")
