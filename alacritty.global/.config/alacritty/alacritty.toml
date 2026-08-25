@@ -18,29 +18,56 @@ style = "Regular"
 family = "JetBrainsMonoNL Nerd Font Mono"
 style = "Bold"
 
+# Spectere
 [colors.primary]
-background = "#282828"
-foreground = "#ebdbb2"
+background = "#060C06"
+foreground = "#55BB55"
+dim_foreground = "#1A3018"
+bright_foreground = "#77DD77"
 
+[colors.cursor]
+text = "#060C06"
+cursor = "#55BB55"
+
+[colors.vi_mode_cursor]
+text = "#060C06"
+cursor = "#338833"
+
+[colors.selection]
+text = "CellForeground"
+background = "#0A1A0A"
+
+# Default plain text uses primary.foreground (green).
+# Apps like chalk use this 16-color ANSI palette — keep hues distinct.
 [colors.normal]
-black   = "#282828"
-red     = "#cc241d"
-green   = "#98971a"
-yellow  = "#d79921"
-blue    = "#458588"
-magenta = "#b16286"
-cyan    = "#689d6a"
-white   = "#a89984"
+black = "#060C06"
+red = "#DD4444"
+green = "#55BB55"
+yellow = "#D4A017"
+blue = "#4A8FBF"
+magenta = "#B060A0"
+cyan = "#3A9A8A"
+white = "#A8B8A8"
 
 [colors.bright]
-black   = "#928374"
-red     = "#fb4934"
-green   = "#b8bb26"
-yellow  = "#fabd2f"
-blue    = "#83a598"
-magenta = "#d3869b"
-cyan    = "#8ec07c"
-white   = "#ebdbb2"
+black = "#1A3018"
+red = "#FF6666"
+green = "#77DD77"
+yellow = "#E8C040"
+blue = "#6AB0D8"
+magenta = "#D080C0"
+cyan = "#50C0B0"
+white = "#D0E0D0"
+
+[colors.dim]
+black = "#060C06"
+red = "#882222"
+green = "#1A3018"
+yellow = "#6A5010"
+blue = "#254860"
+magenta = "#583050"
+cyan = "#1D4D45"
+white = "#4A5A4A"
 
 [cursor]
 style = { shape = "Beam", blinking = "Off" }
