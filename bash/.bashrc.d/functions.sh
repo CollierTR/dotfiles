@@ -54,7 +54,7 @@ work-issues() {
     az boards query --wiql "SELECT [System.Id], [System.Title], [System.State], [System.WorkItemType] FROM WorkItems WHERE [System.State] <> 'Done' AND [System.AssignedTo] = @me ORDER BY [System.Id]" -o table
     gh search issues --owner Bonnie-Plants-LLC --state open --assignee @me
   else
-    az boards query --wiql "SELECT [System.Id], [System.Title], [System.State], [System.WorkItemType] FROM WorkItems WHERE [System.State] <> 'Done' ORDER BY [System.Id]" -o table
+    az boards query --wiql "SELECT [System.Id], [System.Title], [System.State], [System.WorkItemType], [System.Tags] FROM WorkItems WHERE [System.State] <> 'Done' ORDER BY [System.Id]" -o table
     gh search issues --owner Bonnie-Plants-LLC --state open
   fi
 }
