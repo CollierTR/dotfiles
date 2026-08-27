@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+d=$(date +%-d)
+case $d in
+  1 | 21 | 31) s=st ;;
+  2 | 22) s=nd ;;
+  3 | 23) s=rd ;;
+  *) s=th ;;
+esac
+date "+%a ${d}${s} %H:%M"
