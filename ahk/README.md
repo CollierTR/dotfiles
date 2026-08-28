@@ -65,7 +65,7 @@ Virtual desktop management inspired by Hyprland workspaces.
 | Win+c | Calendar |
 | Win+Alt+c | New Google Calendar event |
 | Win+s | Spotify |
-| Win+y | Monkeytype |
+| Win+y | YouTube (app mode) |
 | Win+x | Excalidraw |
 | Win+o | Downloads folder |
 | Win+/ | AHK help file |
