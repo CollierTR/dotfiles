@@ -1,4 +1,6 @@
 return {
   "f-person/git-blame.nvim",
-  enabled = false,
+  keys = {
+    { "<leader>gb", "<cmd>GitBlameToggle<CR>", desc = "Git [b]lame toggle" },
+  },
 }

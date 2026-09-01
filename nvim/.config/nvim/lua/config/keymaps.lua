@@ -32,7 +32,6 @@ vim.keymap.set("n", "<leader>ts", "<cmd>set spell!<CR>") -- toggle spell-check
 vim.keymap.set("n", "<leader>tt", "<cmd>ToggleTerm size=40 dir=~/Desktop direction=float name=desktop <CR>") -- toggle terminal
 vim.keymap.set("n", "<leader>tc", "<cmd>Telescope colorscheme<CR>") -- toggle colorscheme
 vim.keymap.set("n", "<leader>tm", "<cmd>MarkdownPreviewToggle<CR>") -- toggle colorscheme
-vim.keymap.set("n", "<leader>tg", "<cmd>GitBlameToggle<CR>") -- toggle git blame info line
 
 -- Bible Keymaps
 vim.keymap.set("n", "<leader>br", "<cmd>BibleRead<CR>", { desc = "Open Bible Reader" })
