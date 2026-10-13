@@ -13,4 +13,21 @@ return
       section = { "Section", "#0074ba" },
     },
   },
+  keys = {
+    {
+      "<leader>st",
+      function()
+        local config = require("todo-comments.config")
+        local exclude = { SECT = true, NOTE = true }
+        local include = {}
+        for kw, main in pairs(config.keywords) do
+          if not exclude[main] then
+            include[#include + 1] = kw
+          end
+        end
+        require("todo-comments.search").setloclist({ keywords = table.concat(include, ",") })
+      end,
+      desc = "[S]earch [T]odos (loclist)",
+    },
+  },
 }

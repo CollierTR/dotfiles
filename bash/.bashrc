@@ -5,15 +5,15 @@
 source "$HOME/.env"
 
 # Color Variables (truecolor — matches alacritty/nvim gruvbox dark)
-blk='\[\033[01;30m\]' # Black
+blk='\[\033[01;30m\]'            # Black
 red='\[\033[38;2;221;68;68m\]'   # #DD4444
 grn='\[\033[38;2;184;187;38m\]'  # #b8bb26 — gruvbox bright green
-ylw='\[\033[01;33m\]' # Yellow
-blu='\[\033[01;34m\]' # Blue
+ylw='\[\033[01;33m\]'            # Yellow
+blu='\[\033[01;34m\]'            # Blue
 pur='\[\033[38;2;211;134;155m\]' # #d3869b — gruvbox bright magenta
-cyn='\[\033[01;36m\]' # Cyan
-wht='\[\033[01;37m\]' # White
-clr='\[\033[00m\]'    # Reset
+cyn='\[\033[01;36m\]'            # Cyan
+wht='\[\033[01;37m\]'            # White
+clr='\[\033[00m\]'               # Reset
 
 # If not running interactively, don't do anything
 case $- in
@@ -58,9 +58,9 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 tags() {
-  rg -o --no-filename -g '*.md' '#[A-Za-z0-9_]+' . \
-    | sort \
-    | uniq -c
+  rg -o --no-filename -g '*.md' '#[A-Za-z0-9_]+' . |
+    sort |
+    uniq -c
 }
 
 findtag() {
@@ -73,8 +73,8 @@ findtag() {
 }
 
 labels() {
-  rg --no-filename -g '*.md' '@[A-Za-z0-9_]+' . \
-    | sort
+  rg --no-filename -g '*.md' '@[A-Za-z0-9_]+' . |
+    sort
 }
 
 # enable programmable completion features
@@ -140,3 +140,8 @@ export PATH="$HOME/bin:$PATH"
 export PATH="$PATH:/mnt/c/Program\ Files/cursor/Cursor.exe"
 export PATH="$HOME/.local/share/gem/ruby/3.2.0/bin:$PATH"
 export NODE_USE_SYSTEM_CA=1
+export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+
+# Android SDK (Windows SDK accessed through WSL)
+export ANDROID_HOME="$HOME/.android-sdk"
+export PATH="$ANDROID_HOME/platform-tools:$PATH"
