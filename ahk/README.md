@@ -9,17 +9,27 @@ Windows keybinding scripts for keyboard-driven workflow.
 
 ## Setup
 
-1. Install the Python dependency for VD Commander:
-   ```
-   pip install pyvda
-   ```
-2. Run the setup script from WSL:
+1. Run the setup script from WSL:
    ```
    ~/.dotfiles/ahk/configure-windows.sh
    ```
-   This copies the scripts to your Windows Startup folder so they run on login.
+   This copies the scripts to `%LOCALAPPDATA%\dotfiles-ahk\`, installs the
+   Python dependency, and creates shortcuts in your Windows Startup folder so
+   they run on login. Only `background-script.lnk` and `vd-commander.lnk` live
+   in Startup — never the `.py` or `.txt` files.
 
-**Manual alternative:** copy the `.ahk` files to `%APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup\`. For vd-commander, also copy `main.py` and `requirements.txt` to the same folder.
+**Manual alternative:**
+1. Copy `windows-keybindings/background-script.ahk` and the contents of
+   `vd-commander/` to `%LOCALAPPDATA%\dotfiles-ahk\` (with
+   `vd-commander.ahk` and `main.py` together in the `vd-commander\` folder).
+2. Install the dependency:
+   ```
+   pip install -r %LOCALAPPDATA%\dotfiles-ahk\vd-commander\requirements.txt
+   ```
+3. Create shortcuts to the two `.ahk` files in
+   `%APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup\`. Set each
+   shortcut's "Start in" to the folder containing its `.ahk` file so
+   `main.py` resolves correctly.
 
 ## Scripts
 
