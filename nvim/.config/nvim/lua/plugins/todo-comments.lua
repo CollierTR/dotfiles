@@ -8,9 +8,11 @@ return
     signs = true,
     keywords = {
       SECT = { icon = "🔷", color = "section", alt = { "SECTION", "sect", "section" } },
+      REFACTOR = { icon = "🔧", color = "refactor", alt = { "refactor" } },
     },
     colors = {
       section = { "Section", "#0074ba" },
+      refactor = { "Refactor", "#c9783e" },
     },
   },
   keys = {
@@ -18,7 +20,7 @@ return
       "<leader>st",
       function()
         local config = require("todo-comments.config")
-        local exclude = { SECT = true, NOTE = true }
+        local exclude = { SECT = true, NOTE = true, REFACTOR = true }
         local include = {}
         for kw, main in pairs(config.keywords) do
           if not exclude[main] then
@@ -28,6 +30,13 @@ return
         require("todo-comments.search").setloclist({ keywords = table.concat(include, ",") })
       end,
       desc = "[S]earch [T]odos (loclist)",
+    },
+    {
+      "<leader>sr",
+      function()
+        require("todo-comments.search").setloclist({ keywords = "REFACTOR" })
+      end,
+      desc = "[S]earch [R]efactor (loclist)",
     },
   },
 }
