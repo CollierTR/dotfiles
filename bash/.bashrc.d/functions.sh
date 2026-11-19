@@ -58,3 +58,7 @@ work-issues() {
     gh search issues --owner Bonnie-Plants-LLC --state open
   fi
 }
+
+chime() {
+  ffplay -nodisp -autoexit ~/Music/sounds/cyber-chime-loud.wav
+}
